@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(arcade.jpeg)
+}
+
+.game {
+    width: 600px;
+    height: 600px;
+    /* border: 3px solid #000000; */
+    position: relative;
+    margin-left: 300px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(space.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.plane {
+    width: 40px;
+    height: 40px;
+    color: white;
+    position: absolute;
+    top: 550px;
+    left: 280px;
+}
+
+.planeIcon {
+    transform: rotate(-90deg);
+    font-size: 40px;
+}
+
+.rock {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: absolute;
+    top: 0px;
+    animation: rock 1.5s infinite linear;
+}
+
+#rock1 {
+    left: 100px;
+    animation-delay: 100ms
+}
+
+#rock2 {
+    left: 280px;
+    background-color: red;
+    animation-delay: 50ms
+}
+
+#rock3 {
+    left: 500px;
+    background-color: green;
+}
+
+@keyframes rock {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 760px;
+    }
+}
+
+#points {
+    font-size: 30px;
+    margin-left: 300px;
+}
+
+.instructions {
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+    font-size: 24px;
+}
